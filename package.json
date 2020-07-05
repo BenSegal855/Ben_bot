@@ -1,0 +1,23 @@
+{
+  "name": "ben_bot",
+  "version": "1.0.0",
+  "description": "This is a bot that is ben",
+  "main": "main.js",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenSegal855/Ben_bot.git"
+  },
+  "author": "Ben855",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenSegal855/Ben_bot/issues"
+  },
+  "homepage": "https://github.com/BenSegal855/Ben_bot#readme"
+}

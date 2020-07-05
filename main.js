@@ -17,9 +17,23 @@ client.on("message", message => {
         message.channel.send(`Enable updated to ${enable}`);
         return;
     }
+
+    if(message.content.startsWith(`${prefix}check`)){
+        message.channel.send(`Enable is currently set to ${enable}`);
+    }
+
+    if(message.content.startsWith(`${prefix}shutdown`)){
+        message.channel.send("Shuting down").then(message =>{
+            process.exit(0);
+        });
+    }
         
     if(enable){
         message.delete();
         message.channel.send(message.content);
     }
+});
+
+process.on('exit', function(code) {
+    return console.log(`Exiting with code ${code}`);
 });

@@ -4,7 +4,8 @@ const client = new Discord.Client();
 var enable = false;
 
 client.once('ready', () => {
-	console.log('Ready!');
+    console.log('Ready!');
+    client.user.setActivity('nothing', { type: 'WATCHING' });
 });
 
 client.login(token);
@@ -15,6 +16,7 @@ client.on("message", message => {
     if(message.content.startsWith(`${prefix}enable`)){
         enable = !enable;
         message.channel.send(`Enable updated to ${enable}`);
+        client.user.setActivity( enable ? 'Ben\'s words' : 'nothing', { type: 'WATCHING' });
         return;
     }
 
